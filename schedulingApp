@@ -1,0 +1,78 @@
+#!/usr/bin/env python
+import pickle         #Save and load variables
+import os             #Examine file structure
+import datetime       #Get/Manipulate Dates and Times
+import events         #Event class variables (user-created)
+from Tkinter import * #GUI
+import GUIscrap3      #Application calendar, menus, etc.
+
+#Check for library file
+libraryPath     = '/home/awr5209/Documents/PythonScripting/Scheduling App'
+libraryFilePath = libraryPath + '/schedDat.p'
+tempOutFilePath = libraryPath + '/tempOut.p'
+
+#Open library and writing library
+#	Existing library
+if os.path.isfile(libraryFilePath):
+	fin = open(libraryFilePath,'rb')
+	eventList = pickle.load(fin)
+	reminders = pickle.load(fin)
+	fin.close()
+else:
+	print 'Calendar file not found.  Start a new calendar or search for old calendar?'
+	inpStr = raw_input('Enter "o" to search for an old calendar, or any other key to start a new calendar: ')
+	if inpStr=='o':
+		while not os.path.isfile(libraryFilePath):	
+			libraryFilePath = raw_input('Please enter file path for calendar file: ')
+		fin = open(libraryFilePath,'rb')
+		eventList = pickle.load(fin)
+		reminders = pickle.load(fin)
+		fin.close()		
+	else:
+		eventList = []
+#	Writing library
+if os.path.exists(tempOutFilePath):
+	a=1
+	fout = open(tempOutFilePath,'wb') #(Currently overwrites temp file)
+	#Program did not close properly last time it was run.  Compare schedules?	
+else:
+	fout = open(tempOutFilePath,'wb')
+
+fileSaveInfo = [libraryPath,libraryFilePath,tempOutFilePath,fout]
+
+
+#Get current date and time
+curTime = datetime.datetime.now()
+#Specify current hour, minute, month and day
+#Month and day... used to draw calendar window
+curMo = curTime.month
+curDa = curTime.day
+#Hour and minute... used to show current time
+curHo = curTime.hour
+curMi = curTime.minute
+
+
+#Launch calendar
+master = Tk()
+a = GUIscrap3.Application(master,eventList,fileSaveInfo,reminders)
+
+master.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
