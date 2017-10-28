@@ -1,9 +1,10 @@
 # disciple
-Personal scheduling app.  Intended to simplify the process of making and editing the schedule to that it is used consistently.
+### Personal scheduling app.  Intended to simplify scheduling so that it is done consistently.
 
 Right now the app is usable, but implementing the following features will make use simpler.
 
-Planned features (ordered by ease of implementation and importance):
+## Planned features 
+### Ordered by ease of implementation and importance:
 1.  Compile code into windows executable file
     - Allow the program to be run by double-clicking an icon rather than from the command prompt
     - An executable can also be tied to Windows start-up, so the schedule opens whenver the user turns on his computer
@@ -29,7 +30,8 @@ Planned features (ordered by ease of implementation and importance):
     
 
 
-Fixes (no particular order):
+## Fixes 
+### No particular order:
 1. Delete old events
     - The code stores all old events; they don't take up a lot of space, but it isn't necessary.  Deleting old events could be incorporated with the follow-up feature
 2.  Ensure prompts are clear, readable, and consistent
