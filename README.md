@@ -3,7 +3,7 @@ Personal scheduling app.  Intended to simplify the process of making and editing
 
 Right now the app is usable, but implementing the following features will make use simpler.
 
-Planned features:
+Planned features (ordered by ease of implementation and importance):
 1.  Compile code into windows executable file
     - Allow the program to be run by double-clicking an icon rather than from the command prompt
     - An executable can also be tied to Windows start-up, so the schedule opens whenver the user turns on his computer
@@ -29,7 +29,7 @@ Planned features:
     
 
 
-Fixes:
+Fixes (no particular order):
 1. Delete old events
     - The code stores all old events; they don't take up a lot of space, but it isn't necessary.  Deleting old events could be incorporated with the follow-up feature
 2.  Ensure prompts are clear, readable, and consistent
@@ -41,7 +41,7 @@ Fixes:
       - Edit the "List 48 hours" button to list a variable number of hours
       - Add a "location" attribute to events?  This could be annoying to fill out every time, because it is not always applicable.
 4.  Clean and organize the code
-   - When isn't this an issue?  Hopefully it is easy to follow, but I know it is disorganized
+    - When isn't this an issue?  Hopefully it is easy to follow, but I know it is disorganized
 5.  Fix the "calendar update" mechanism
     - In certain situations the calendar will simply draw another copy over itself when it is edited. 
     - Rather than redrawing the calendar, it would be better to store attributes of the elements, and change them when appropriate.  The "current time" bar feature works this way, in that its position in the calendar space is altered whenever the time is updated
