@@ -1,7 +1,11 @@
 # disciple
 ### Personal scheduling app.  Intended to simplify scheduling so that it is done consistently.
 
-Right now the app is usable, but implementing the following features will make use simpler.
+## Use
+
+To run, change the "libraryPath" variable in "schedulingApp" to a valid path on your computer.  The app will create a data file in that location. Then, run the "schedulingApp" code.
+
+Right now the app is usable, but implementing the following changes will simplify it.
 
 ## Planned features 
 ### Ordered by ease of implementation and importance:
