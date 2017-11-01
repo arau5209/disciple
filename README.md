@@ -12,6 +12,8 @@ Right now the app is usable, but implementing the following changes will simplif
 1.  Compile code into windows executable file
     - Allow the program to be run by double-clicking an icon rather than from the command prompt
     - An executable can also be tied to Windows start-up, so the schedule opens whenver the user turns on his computer
+    - Executable and schedule data can be stored in a Dropbox folder, so the schedule can be synchronized between devices
+    - It seems there are programs for this purpose: http://www.pyinstaller.org/
 2. Edit events
     - Sounds dumb, but right not there isn't an option to edit events that are entered.  Instead events must be deleted and recreated.
     - This option can borrow a lot of code from the event entry feature.
